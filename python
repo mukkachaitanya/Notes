@@ -1,0 +1,66 @@
+Python: 
+
+- split returns a splited dict/ list
+- append adds to ans empty array, list
+- print "%.nf" ; n spefies precision upto n decimal spaces
+- map() => 	
+	>>> squares = []
+	>>> for x in range(10):
+	...     squares.append(x**2)
+	>>> squares
+	[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+	same as
+
+	squares = [x**2 for x in range(10)]
+	or
+	squares = map(lambda x: x**2, range(10))
+
+- map(function f, sequence s,....):
+	it returns the sequence of type s(default list) modified by the function f.
+	[IMP! IT CAN TAAKE MORE THAN 1 SEQUENCES]
+	eg: map(int, "1 3 5") returns a list [1, 3, 5]   etc..
+
+- tuple(list) makes a tuple from the list
+
+- x.strip([char]) strips of the end charcters, char, from  the list/string x, (default whitespaces)211	
+
+- filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. 
+[imp! IT TAKES ONLY 2 ARGS,.. INSTEAD USE LIST COMPREHENSION, see line 49]
+
+- reduce(function, sequence) returns a single value constructed by calling the binary function function on the first two items of the sequence, then on the result and the next item (similar to recursion)
+
+- in module __future__ , 
+	print(item, sep = , end = )
+
+	also for int div: a//b and for decimal div a/b
+
+- lamda x :  similar to #define macros
+
+- map() consumes more time than for loop.
+
+- sorted(data_type) returns the same data_type sorted.
+
+- print(time.time()) : prints the time the prom took from its begin to run.
+
+- lists can be: 
+	index and slice , append  , delete from , sort  and reverse .
+
+- List Comprehensions: derived from map:
+	sq = [a**2 for a in range(5)]
+	op = [[x,y,z] for x in range(a+1) for y in range(b+1) for z in range(c+1) if x+y+z!=n] 
+
+(ref: https://docs.python.org/2/tutorial/datastructures.html; 5.1.3)
+
+- sorted(list_to_sort, key=itemgetter(2,0,1))
+	import: from operator import itemgetter
+	also: 
+	l.sort(key=lambda x: x[2])
+
+- join():  The method join() returns a string in which the string elements of sequence have been joined by str separator.
+	str.join(seq/list)
+
+
+STRINGS:
+
+- str.swapcase() : swaps the case of each letter in a str

@@ -1,0 +1,36 @@
+-----JQUERY-----
+
+Functions:
+- addClass() :  adds  classes to the objects
+- removeClass() : ob
+- css("attrb", "value") : changes the css of the elm
+- prop(-do-) : changes the html props of the elm
+- html()  : adds html line b/w the elm
+- text() : adds text and doesn't evaluate the html	
+- remove() :  removes the element
+- appendTo() that allows you to select HTML elements and append them to another element
+- clone() that makes a copy of an element.
+- parent() : parent of the elm
+- children() : up and above
+
+
+- Write scripts inside <script> elem.
+- document ready function, your code may run before your HTML is rendered, which would cause bugs.
+	$(document).ready(function(){   });
+- All jQuery functions start with a $, usually referred to as a dollar sign operator, or simply as bling.
+
+- jQuery often selects an HTML element with a selector, then does something to that element.
+	eg. This adds a bounce to buttons upon document ready.
+		$("button").addClass("animated bounce");
+								 ^		  ^  (different classes)	
+	$(class/elem/id).addClass("the required jQ act");
+
+
+- target:nth-child(n) css selector allows you to select all the nth elements with the target class or element type.
+
+
+JAVASCRIPT
+
+- data types: which are undefined, null, boolean, string, symbol, number, and object.
+- declaration:
+	var <varname> ;

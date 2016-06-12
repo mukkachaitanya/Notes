@@ -1,0 +1,91 @@
+CMDS
+
+- init : initializes the current folder as a git repo
+- status :  untracked files and changes to be staged (i.e. if something to commit or in staging area)
+- add <files> :  adds the files to be tracked i.e adds the file to the staging area; from the pwd
+- diff :  differences b/w staging and working directory
+- commit (options -m) : used to commit changes to repo/ -m to add desc./
+- log : gives commits in chronological order
+- show HEAD : displays everything the git log command displays for the HEAD commit + all file changes
+- checkout <HEAD/branch> <filename> : discards the recent changes and returns to Head commit/master
+- reset <commit> [<filename>] : resets files in staging area to given commit/while using SHA use first 7 chars
+- branch -d <new_branch> :  creates new branch/ -d to deletegit branch
+- merge  <branch> : merges the commits.
+- clone <remote_location> <clone_name> : clones
+- remote -v : list of a Git project's remotes
+
+INFO: 
+
+
+- A Git project can be thought of as having three parts:
+	1. A Working Directory: where you'll be doing all the work: creating, editing, deleting and organizing files
+	2. A Staging Area: where you'll list changes you make to the working directory
+	3. A Repository: where Git permanently stores those changes as different versions of the project
+
+- The file should be added to the staging are after changes beeen made
+- A commit permanently stores changes from the staging area inside the repository.
+
+- Desc, of a commit should be
+	Brief(<50w), Present Tense
+
+- The log o/p:
+	40 charcter SHA; identifies each commit
+	author, and timestamp
+	msg(desc.)
+
+- New Branch is a different version of the Git project. 
+  It contains commits from Master but also has commits that Master does not have.
+- The '*' in the branch cmd points to the current branch.
+
+- Branching is very important when multiple people are working.
+
+- To switch to a branch use : 
+ 	git checkout <branch_name>
+
+- This means that every commit master has, new_branch also has.
+- merge gives conflict message upon conflict in commits of diff branches
+
+- git remote -v : 
+	Git lists the name of the remote, origin, as well as its location.
+	Git automatically names this remote origin, because it refers to the remote repository of origin. 
+	However, it is possible to safely change its name.
+	The remote is listed twice: once for (fetch) and once for (push).
+
+- git fetch :
+	will not merge changes from the remote into your local repository. 
+	It brings those changes onto what's called a remote branch
+	Then can be merged with local :  git merge origin/master 
+
+
+
+SUMMARIES: 
+
+- Use Git commands to help keep track of changes made to a project:
+	git init creates a new Git repository
+	git status inspects the contents of the working directory and staging area
+	git add adds files from the working directory to the staging area
+	git diff shows the difference between the working directory and the staging area
+	git commit permanently stores file changes from the staging area in the repository
+	git log shows a list of all previous commits
+
+- Let's take a moment to review the new commands:
+
+	git checkout HEAD filename: Discards changes in the working directory.
+	git reset HEAD filename: Unstages file changes in the staging area.
+	git reset SHA: Can be used to reset to a previous commit in your commit history.
+
+- The following commands are useful in the Git branch workflow.
+
+	git branch: Lists all a Git project's branches.
+	git branch branch_name: Creates a new branch.
+	git checkout branch_name: Used to switch from one branch to another.
+	git merge branch_name: Used to join file changes from one branch to another.
+	git branch -d branch_name: Deletes the branch specified.
+
+- We also learned the following commands
+	git clone: Creates a local copy of a remote.
+	git remote -v: Lists a Git project's remotes.
+	git fetch: Fetches work from the remote into the local copy.
+	git merge origin/master: Merges origin/master into your local branch.
+	git push origin <branch_name>: Pushes a local branch to the origin remote.
+

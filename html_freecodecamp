@@ -1,0 +1,216 @@
+TAGS: 
+
+- <h1> : etc tags used for headings
+- <p> : paragraph tag
+- <!--  --> : tag used to comment
+- <img src= "" ; align="">
+- <ul> : unordered list
+- <ol> : ordered list
+
+- <a href="">text</a> : 
+	anchor or hyper link tag
+	# : can be used to keep a dead link (esp in href)
+
+- input: Used for taking inputs.
+	type => text, radio(mcq wala), checkbox(multiple ans type), 
+	name => defines the name tag for the type of input (Esp. in radio to grp under a name)
+	placeholder => (that grey text in textbox before typing)
+	required => ob
+	checked => ob (checkbox, radio)
+
+- alt : tag used to disp atl text if pic/element fails
+- form : 
+	action => used to specify url to submit data
+- label : creates a label of the given tag, which can be maped to input
+
+- (VVVI) div 
+
+ATTRIBUTES
+
+- border: (not tag)
+	border-color, border-style(solid), border-width(in px), border-radius(in px, or %)
+- backgound:
+	background-color; 
+- id : used to give an id to the elem(all)
+
+
+CSS
+
+- style : "color:xxx"
+- font-size : in pixels
+- font-family : name of the font. eg. Sans-serif
+- width (for images,tables etc) : defines the width of certain elements in px
+- padding(in px) :  can be specifies in clockwise manner (t-r-b-l)
+	padding-right, padding-top, etc.
+- margin(can be -ve) : CW notation
+	margin-bottom, etc.
+
+- CSS : cascading style sheets, can be used to define style tags info beforehand
+	eg. <style> 
+			tag-name(eg. h1) { 
+			attributes //eg. color: red; 
+			}
+		</style>
+
+- CSS Classes can be declared in style tag to extend styles.
+	 CSS style element, classes should start with a period. 
+	 In your HTML elements' class declarations, classes shouldn't start with a period.
+	 eg. <style>
+	 		.blue-text{
+	 			color: blue;
+	 		}
+	 	</style>
+	 	
+	 	#usage
+	 	<h1 class="blue-text">
+
+- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> 
+	(this imports Lobster font)
+	used to pull fonts from GoogleAPIs.
+	Like imports in python. 
+
+- Can use multiple parms in style declaration, JIK the previous ones aren't available:
+	h1{
+		font-family: Lobster, Sans-serif;
+	}
+
+- multiple classes can be applied to a tag by seprating them by spaces. 
+	class="class1 class2"
+- checked attribute in an input tag make it checked by default.
+
+- The div element, also known as a division element, is a general purpose container for other elements.
+
+- You can refernce ids in CSS by # and can define their properties as for done for other tags
+
+
+
+- Three important properties control the space that surrounds each HTML element: padding, margin, and border.
+	An element's padding controls the amount of space between the element and its border.
+	An element's margin controls the amount of space between an element's border and surrounding elements.
+
+- Local style declartaions can overide the inherited ones. (following will be pink)
+	<style>
+	  body {
+	    background-color: black;
+	    font-family: Monospace;
+	    color: green;
+	    
+	}
+	  .pink-text{
+	     color: pink;   
+   	}
+	</style>
+
+	<h1 class="pink-text">Hello World!</h1>
+
+- The order of the class declarations in the <style> section are what is important. 
+  The second declaration will always take precedence over the first.
+  Also id attribute declaration(wo # wala) precede all, wherever it being declared
+  But again, in-line declarations have the higher precedence
+  Atop, can use "!important" keyword to the style declaration to give highest precedence
+
+- in-line style : 
+	<h1 style="color: green">
+
+- Important key word: Iin style declarations i.e. classes )
+    color: red !important;
+
+- hex code : 6 numbers to represent colors #RRGGBB
+    Red = #FF0000
+    Green = #00FF00
+
+ -  Color       Hex Code
+    Dodger Blue #2998E4
+    Green       #00FF00
+    Orange      #FFA500
+    Red         #FF0000
+
+ - short hand hex code : #RGB
+ - another way : rgb(0-255, 0-255, 0-255)
+    Color   RGB
+    Blue    rgb(0, 0, 255)
+    Red     rgb(255, 0, 0)
+    Orchid  rgb(218, 112, 214)
+    Sienna  rgb(160, 82, 45)
+- font-weight : normal,bold,bolder, lighter, or number;
+
+
+
+BOOTSTRAP: 
+
+
+- BootStrap responsive Framework for CSS: 
+    Responds by resizing your HTML-elems depending on the screen width
+    can be included by => 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    can be refered by using the class "container-fluid", in the elems
+(BS classes)
+
+- img-responsive : class to make images responsive
+- text-center : center the text ob
+- btn : class for button elems; creates very good looking buttons; (The button classes can be used on an <a>, <button>, or <input> element)
+    btn-block : button will stretch to fill your page's entire horizontal space and any elements following it 
+                will flow onto a "new line" 
+    //.btn-primary : class is the main color you'll use in your app (primary button color)
+    .btn-default : default no color
+    .btn-primary : blue color, primary actions
+    .btn-success : green color
+    .btn-info : cyaan color
+    .btn-warning : orange color
+    .btn-danger : red ob
+    .btn-link : link(blue)
+- Similarly we have .text-primary, etc for text elms.
+
+- BS has extensive grid system which can be used to partition elm to rows and cols, as and required sizes: (Fig.1. Summer16)
+    These are nested in div statements.
+    It is a 12-column grid layout. ()
+    classes => .col-<size>-* ; size : md(medium), xs(xtra small),   ; * : 1,4,6,8 
+    eg.(Fig.2)
+        <div class="row">
+            <div class="col-xs-4">
+            <button class="btn btn-block btn-primary">Like</button>
+            </div>
+
+            <div class="col-xs-4">
+            <button class="btn btn-block btn-info">Info</button>
+            </div> 
+            <div class="col-xs-4">
+            <button class="btn btn-block btn-danger">Delete</button>
+            </div>
+        </div>
+
+- <span> element can be used to put several elements together
+  and also style different parts of the same element differently
+
+- Font Awesome is a convenient library of icons. 
+    These icons are vector graphics, stored in the .svg file format. 
+    These icons are treated just like fonts.
+    inclusion = <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    eg. fa-* : trash, thumbs-up, info-circle, paper-plane
+
+- <i> : element is used for icons; nest in in b/w elements:
+    <i class="fa fa-trash">
+
+- give textual input a class of "form-control" => gives BS type i/p
+
+- center-block to center the block(ob)
+
+- pull-right : will pull the elm right (class)
+
+- well class : 
+    creates depth in the columns 
+
+- .img-rounded      Adds rounded corners to an image 
+  .img-circle       Shapes the image to a circle 
+  .img-thumbnail    Shapes the image to a thumbnail
+  .img-responsive   Makes an image responsive
+
+- box-shadow: h-shadow v-shadow blur spread color 
+    eg. box-shadow: 10px 10px 5px #888888
+
+- em : unit of size (like px)
+    1em is equivalent to the font-size in tht elmcontainer etc.(typically 16px)
+    h{
+        font-size: 20px;
+        padding: 2em ; /* eq to 40px*/
+    }
