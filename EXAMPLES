@@ -1,0 +1,26 @@
+EXAMPLES
+
+
+- palindrome (FCC Javscript)
+	function palindrome(str) {
+	  var newStr = str.toLowerCase().replace(/[^A-Za-z0-9]/g,'');
+	  var len = newStr.length;
+	  
+	  for(var i=0; i<len/2; ++i)
+	    if(newStr[i]!=newStr[len-i-1])
+	      return false;
+	  
+	  return true;
+	}
+	
+- Longest word of the sentence (FCC JS):
+	function findLongestWord(str) {
+	  var chkStr = str.split(' ');
+	  
+	  var maxLen = 0;
+	  for(var i =0; i<chkStr.length; ++i)
+	    if(chkStr[i].length>maxLen)
+	      maxLen = chkStr[i].length;
+
+	  return maxLen;
+	}

@@ -6,7 +6,7 @@ Functions:
 - css("attrb", "value") : changes the css of the elm
 - prop(-do-) : changes the html props of the elm
 - html()  : adds html line b/w the elm
-- text() : adds text and doesn't evaluate the html	
+- text() : adds text and doesn't evaluate the html
 - remove() :  removes the element
 - appendTo() that allows you to select HTML elements and append them to another element
 - clone() that makes a copy of an element.
@@ -22,7 +22,7 @@ Functions:
 - jQuery often selects an HTML element with a selector, then does something to that element.
 	eg. This adds a bounce to buttons upon document ready.
 		$("button").addClass("animated bounce");
-								 ^		  ^  (different classes)	
+								 ^		  ^  (different classes)
 	$(class/elem/id).addClass("the required jQ act");
 
 
@@ -34,3 +34,59 @@ JAVASCRIPT
 - data types: which are undefined, null, boolean, string, symbol, number, and object.
 - declaration:
 	var <varname> ;
+	$ or _ accepted in varname
+
+- When JavaScript variables are declared, they have an initial value of undefined.
+	If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number".
+	If you concatenate a string with an undefined variable, you will get a literal string of "undefined".
+
+- str in js are immutable i.e. each elem of str can't be changed.
+
+- typeof null returning 'object' is a bug that can’t be fixed, because it would break
+  existing code. It does not mean that null is an object.
+
+- push(elm)  ~ unshift(elm)
+  pop() (returns)  ~  shift()
+
+- delete obj.prop;
+
+- Objects have their own attributes, called properties, and their own functions, called methods.(similar to classes)
+
+- create instances of the object by using the keyword new
+
+- Inside an object, the properties referred by "this. " is public while others are private.
+		var Car = function() {
+		  // this is a private variable
+		  var speed = 10;
+
+		  // these are public methods
+		  this.accelerate = function(change) {
+		    speed += change;
+		  };		//notice the semi-colon at the end
+
+		  this.decelerate = function() {
+		    speed -= 5;
+		  };
+
+		  this.getSpeed = function() {
+		    return speed;
+		  };
+		};
+- map method is a convenient way to iterate through arrays.
+	var timesFour = oldArray.map(function(val){
+  		return val * 4;
+	});
+  map each element of the array with the function argument 
+
+- To use reduce you pass in a callback whose arguments are an accumulator (in this case, previousVal) and the current value (currentVal).
+
+- var singleVal = array.reduce(function(previousVal, currentVal) {
+  return previousVal - currentVal;
+	}, 0);
+	   ^ optional argument to initialize previousVal with, else is 1st element.
+
+- sort can be passed a compare function as a callback. The compare function should return a negative number if a should be before b, a positive number if a should be after b, or 0 if they are equal.
+	var array = [1, 12, 21, 2];
+	array.sort(function(a, b) {
+	  return a - b;
+	});

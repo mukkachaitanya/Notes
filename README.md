@@ -6,3 +6,4 @@ Notes made while doing moocs and online courses.
 - HTML/CSS
 - Javascript
 - TIP Interconnected systems
+- Git
