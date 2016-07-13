@@ -12,7 +12,7 @@ Functions:
 - clone() that makes a copy of an element.
 - parent() : parent of the elm
 - children() : up and above
-
+- Array.forEach():
 
 - Write scripts inside <script> elem.
 - document ready function, your code may run before your HTML is rendered, which would cause bugs.
@@ -90,3 +90,57 @@ JAVASCRIPT
 	array.sort(function(a, b) {
 	  return a - b;
 	});
+
+- The substr() method returns the characters in a string beginning at the specified location through the specified number of characters.
+
+	str.substr(start[, length])
+
+	start
+	Location at which to begin extracting characters. If a negative number is given, it is treated as strLength + start where strLength is the length of the string (for example, if start is -3 it is treated as strLength - 3.)
+	
+	length
+	Optional. The number of characters to extract.
+
+- The slice() method extracts a section of a string and returns a new string.
+		str.slice(beginSlice[, endSlice])
+	also works with array.
+
+- The splice() method changes the content of an array by removing existing elements and/or adding new elements.
+	array.splice(start, deleteCount[, item1[, item2[, ...]]])
+	item1, item2, ...
+		The elements to add to the array, beginning at the start index. If you don't specify any elements, splice() will only remove elements from the array.
+	Returns
+		An array containing the deleted elements. If only one element is removed, an array of one element is returned. If no elements are removed, an empty array is returned.
+
+- The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+	str.indexOf(searchValue[, fromIndex])
+
+- The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+	arr.filter(callback()[, thisArg])
+
+
+APIs 
+
+- APIs - or Application Programming Interfaces - are tools that computers use to communicate with one another.`
+	APIs transfers data in form of JSON'
+	(The getJSON() method is used to get JSON data using an AJAX HTTP GET request.)
+	
+	$(selector).getJSON(url,[data,[success(data,status,xhr)]])
+
+
+	e.g. 
+	$.getJSON("/json/cats.json", function(json) {
+		$(".message").html(JSON.stringify(json));
+	});
+
+- JSON received is a collection of objects, i.e. an array of obj.
+	Object.keys(val) => gives the keys or ids of the object
+
+- Every browser has a built in navigator that can give us this information.
+	The navigator will get our user's current longitude and latitude.
+	
+	if (navigator.geolocation) {
+  		navigator.geolocation.getCurrentPosition(function(position) {
+		    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+		  });
+	}
