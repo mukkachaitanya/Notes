@@ -12,7 +12,7 @@ EXAMPLES
 	  
 	  return true;
 	}
-	
+
 - Longest word of the sentence (FCC JS):
 	function findLongestWord(str) {
 	  var chkStr = str.split(' ');
@@ -24,3 +24,34 @@ EXAMPLES
 
 	  return maxLen;
 	}
+
+- function confirmEnding(str, target) {
+	  if(str.substr(-target.length)==target)
+	    return true;
+	  return false;
+	}
+
+
+- Occurrence of str (FCC):
+	function mutation(arr) {
+	  var one=arr[0].toLowerCase().split('');
+	  var two=arr[1].toLowerCase().split('');
+	  
+	  for(var i=0; i<two.length; ++i){
+	    if(one.indexOf(two[i]) < 0)
+	      return false;
+	  }
+	  
+	  return true;
+	}
+
+- Destroy the mentioned elements: 
+
+	function destroyer(arr) {
+	  var args = Array.from(arguments);
+	  return arr.filter(function(elm){ 
+	                        return !(args.indexOf(elm,1)+1); 	// indexOf returns -1 if not found
+	                      });
+
+	}
+	destroyer([1, 2, 3, 1, 2, 3], 2, 3);
