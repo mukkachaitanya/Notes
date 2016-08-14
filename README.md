@@ -5,6 +5,6 @@ Notes made while doing moocs and online courses.
 - Python
 - HTML/CSS
 - JavaScript
-- TIP Interconnected systems
 - Git
+- Node JS
 - Examples
