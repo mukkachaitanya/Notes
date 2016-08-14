@@ -106,3 +106,29 @@ ELements/ Wigdets
 		stack.add_titled(elem, "id", "Stack Name")
 	-> to add stck switcher
 		switcher = Gtk.StackSwitcher()
+
+
+- Odd stuff : 
+	New-style classes inherit from object, or from another new-style class.
+
+			class NewStyleClass(object):
+			    pass
+
+			class AnotherNewStyleClass(NewStyleClass):
+			    pass
+
+	Old-style classes don't.
+
+			class OldStyleClass():
+			    pass
+
+	super() doesn't work with old style classes. As :
+		>>instance = OldStyleClass()
+		>>issubclass(instance.__class__, object)
+		False
+
+	instead use :
+		class OldStyleClass(AnotherOldClass, object):
+	so as to have NewStyleClass functionality/.
+
+	Or use C++ style inheritance.

@@ -43,6 +43,10 @@ CSS
 - padding(in px) :  can be specifies in clockwise manner (t-r-b-l)
 	padding-right, padding-top, etc.
 - margin(can be -ve) : CW notation
+    margin: 25px 50px;
+        top and bottom margins are 25px
+        right and left margins are 50px (best in %)
+
 	margin-bottom, etc.
 
 - CSS : cascading style sheets, can be used to define style tags info beforehand
@@ -209,7 +213,7 @@ BOOTSTRAP:
     eg. box-shadow: 10px 10px 5px #888888
 
 - em : unit of size (like px)
-    1em is equivalent to the font-size in tht elmcontainer etc.(typically 16px)
+    1em is equivalent to the font-size in that elm container etc.(typically 16px)
     h{
         font-size: 20px;
         padding: 2em ; /* eq to 40px*/
